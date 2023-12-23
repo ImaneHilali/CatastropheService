@@ -32,18 +32,14 @@ public class CatastropheServiceImp implements CatastropheService {
                 .map(existingDisaster -> {
                     existingDisaster.setName(updatedDisaster.getName());
                     existingDisaster.setLocation(updatedDisaster.getLocation());
-                    // Update other fields if needed
                     return catastropheRepo.save(existingDisaster);
                 })
-                .orElse(null); // Handle not found case
+                .orElse(null); 
     }
 
     public void deleteDisaster(Long id) {
         catastropheRepo.deleteById(id);
     }
-
-    // Other endpoints...
-
-    // Other methods...
+ 
 }
 
