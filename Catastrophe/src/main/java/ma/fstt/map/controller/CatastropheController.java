@@ -12,7 +12,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/catastrophe")
-@CrossOrigin(origins = "http://localhost:4200") // Allow requests from your Angular app's origin
+@CrossOrigin(origins = "http://localhost:4200") 
 public class CatastropheController {
     @Autowired
     private CatastropheService catastropheService;
